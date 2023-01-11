@@ -353,6 +353,7 @@ impl<'a> FgbWriter<'a> {
             reader.read_exact(&mut buf)?;
             out.write(&buf)?;
         }
+        out.flush()?;
 
         Ok(())
     }
